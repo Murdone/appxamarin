@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmGuia.View.Pagina1">
+    <Grid BackgroundColor="#464FBC">
+        <StackLayout VerticalOptions="Center">
+           
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="Numero1"   
+                       TextColor="White"
+                       FontAttributes="Bold" 
+                       VerticalOptions="Center"/>
+                <Entry PlaceholderColor="White"
+                       Placeholder="Ingrese Su numero"
+                       HorizontalOptions="StartAndExpand"
+                       TextColor="White"
+                       Text="{Binding N1}"
+                       Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="Numero2"   
+                       TextColor="White"
+                       FontAttributes="Bold" 
+                       VerticalOptions="Center"/>
+                <Entry PlaceholderColor="White"
+                       Placeholder="Ingrese Su numero"
+                       HorizontalOptions="StartAndExpand"
+                       TextColor="White"
+                       Text="{Binding N2}"
+                       Keyboard="Numeric"/>
+            </StackLayout>
+            <Button Text="Sumar"
+                    VerticalOptions="Center"
+                        HorizontalOptions="Center" 
+                            Command="{Binding Sumarcomand}"
+                                TextTransform="None"
+                                 CornerRadius="100" />
+            <Label Text="{Binding Res}"
+                     TextColor="White"
+                       x:Name="Res"
+                        HorizontalOptions="Center"
+                            FontAttributes="Bold"
+                                   FontSize="40" />
+        </StackLayout>
+    </Grid>
+   
+</ContentPage>
